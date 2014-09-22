@@ -54,7 +54,7 @@
                     // If they're laid out as an ordered/unordered list,
                     // insert an <li> after the last list item:
                     row.append('<li><a class="' + options.deleteCssClass + '" href="javascript:void(0)">' + options.deleteText +'</a></li>');
-                } else if options.deleteBefore != null && options.deleteAfter != null {
+                } else if (options.deleteBefore != null && options.deleteAfter != null) {
                     // If there is a before and after text defined insert
                     // the remove button as the last child element of the
                     // form's container with the before and after text:
