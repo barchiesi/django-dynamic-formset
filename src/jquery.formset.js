@@ -55,9 +55,9 @@
                     // insert an <li> after the last list item:
                     row.append('<li><a class="' + options.deleteCssClass + '" href="javascript:void(0)">' + options.deleteText +'</a></li>');
                 } else {
-                    // Otherwise, just insert the remove button as the
-                    // last child element of the form's container:
-                    row.append('<a class="' + options.deleteCssClass + '" href="javascript:void(0)">' + options.deleteText +'</a>');
+                    // GeSalus situation. row is a <div class="row"> so we append
+                    // a <div class="col-lg-1">
+                    row.append('<div class="col-lg-1"><a class="' + options.deleteCssClass + '" href="javascript:void(0)">' + options.deleteText +'</a></div>');
                 }
                 row.find('a.' + delCssSelector).click(function() {
                     var row = $(this).parents('.' + options.formCssClass),
