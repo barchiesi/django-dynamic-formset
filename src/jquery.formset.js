@@ -57,7 +57,7 @@
                 } else {
                     // GeSalus situation. row is a <div class="row"> so we append
                     // a <div class="col-lg-1">
-                    row.append('<div class="col-lg-1"><a class="' + options.deleteCssClass + '" href="javascript:void(0)">' + options.deleteText +'</a></div>');
+                    row.append(options.deleteBefore + '<a class="' + options.deleteCssClass + '" href="javascript:void(0)">' + options.deleteText +'</a>' + options.deleteAfter);
                 }
                 row.find('a.' + delCssSelector).click(function() {
                     var row = $(this).parents('.' + options.formCssClass),
@@ -197,6 +197,8 @@
         formTemplate: null,              // The jQuery selection cloned to generate new form instances
         addText: 'add another',          // Text for the add link
         deleteText: 'remove',            // Text for the delete link
+        deleteBefore: null,              // Text to put before the delete link
+        deleteAfter: null,               // Text to put after the delete link
         addCssClass: 'add-row',          // CSS class applied to the add link
         deleteCssClass: 'delete-row',    // CSS class applied to the delete link
         formCssClass: 'dynamic-form',    // CSS class applied to each form in a formset
