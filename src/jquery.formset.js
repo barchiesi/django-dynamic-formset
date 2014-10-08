@@ -49,7 +49,7 @@
                 if (row.is('TR')) {
                     // If the forms are laid out in table rows, insert
                     // the remove button into the last table cell:
-                    row.children(':last').append('<a class="' + options.deleteCssClass +'" href="javascript:void(0)">' + options.deleteText + '</a>');
+                    row.children(':last').after('<td class="text-center"><a class="' + options.deleteCssClass +'" href="javascript:void(0)">' + options.deleteText + '</a></td>');
                 } else if (row.is('UL') || row.is('OL')) {
                     // If they're laid out as an ordered/unordered list,
                     // insert an <li> after the last list item:
@@ -123,7 +123,7 @@
             }
             if (hasChildElements(row)) {
                 row.addClass(options.formCssClass);
-                if (row.is(':visible')) {
+                if (true) {
                     insertDeleteLink(row);
                     applyExtraClasses(row, i);
                 }
